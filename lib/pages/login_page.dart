@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutterproj1/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -16,7 +17,8 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
 
-      body: Column(
+      body:SingleChildScrollView(
+      child:Column(
         children: [
           Text("Welcome dear",
           style: TextStyle(
@@ -26,10 +28,10 @@ class LoginPage extends StatelessWidget {
           ),
           ),
           Image.asset("assets/images/login_image.png",
-              scale: 4,
+              height: 180,
           ),
           SizedBox(
-            height: 2,
+            height: 1,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0,horizontal: 10.0) ,
@@ -49,16 +51,19 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 40,
                 ),
-                ElevatedButton(onPressed: () {},
+                ElevatedButton(onPressed: () {
+                  Navigator.pushNamed(context, myRoutes.HomeRoute);
+                },
                     child: Text("Login"),
-                  style: TextButton.styleFrom(),
+                  style: TextButton.styleFrom(minimumSize:Size(90, 30)),
                 ),
               ],
             ),
           ),
         ],
+      ),
       ),
     );
   }
