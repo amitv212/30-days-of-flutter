@@ -15,4 +15,4 @@ final product =[
       price: 999,
       color: "#33505a",
       image: "https://m.media-amazon.com/images/I/712yl2wTDbL._AC_SL1500_.jpg")
-]
+];
